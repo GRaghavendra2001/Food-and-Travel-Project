@@ -1,0 +1,166 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+#head
+{
+  width: 100%;
+  height: 100vh;
+  /* background-color: brown; */
+  background-size:100% ,100%;
+  
+}
+#left
+{
+  height:100px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  top: 255px;
+  font-size: 60px;
+  background-color: transparent;
+  border: none;
+  text-shadow: 4px 4px 5px black;
+  color: white;
+}
+#right
+{
+  height:100px;
+  width: 100px;
+  position: absolute;
+  right: 0px;
+  top: 260px;
+  font-size: 60px;
+  background-color: transparent;
+  border: none;
+  text-shadow: 4px 4px 5px black;
+  color: white;
+}
+#txt
+{
+  position: relative;
+  top: 220px;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   color: white;
+   text-shadow: 4px 4px 5px black;
+   font-size: 80px;
+   letter-spacing: 27px;
+   transition: all 1s;
+}
+#txt:hover
+{
+   letter-spacing: 100px;
+}
+#main
+{
+ display: flex;
+ list-style: none;
+}
+#sublist
+{
+margin-right: 100px;
+font-size: 23px;
+color: rgba(255, 255, 255, 0.712);
+transition: all 0.3s;
+text-shadow: 2px 2px 2px black;
+}
+#sublist:hover
+{
+   transform: scale(1.1);
+}
+#nav
+{
+font-size: 23px;
+color: rgba(255, 255, 255, 0.712);
+transition: all 0.3s;
+text-shadow: 2px 2px 2px black;
+text-decoration: none;
+position: relative;
+left: 50px;
+top: 20px;
+}
+#nav:hover
+{
+color: lightgreen;
+}
+.right{
+position: relative;
+left: 900px;
+}
+body
+{
+background-image: linear-gradient(DarkGrey,YellowGreen);
+background-size: 100vh, 280vh;
+}
+#gallaxy
+{
+width: 100%;
+height: 250vh;
+display: flex;
+justify-content: center;
+align-content: center;
+flex-wrap: wrap;
+flex-direction: row;
+row-gap: 15vh;
+column-gap: 5vh;
+position: absolute;
+top: 50vh;
+}
+.images
+{
+width: 280px;
+height: 220px;
+transition: transform 0.5s;
+border-radius: 10px;
+box-shadow: 5px 5px 5px black;
+transition-timing-function: ease-out;
+}
+.images:hover
+{
+transform: scale(1.2);
+}
+#body_of_gallaxy
+{
+position: absolute;
+top: 40vh;
+width: 100%;
+}
+#extendimage
+{
+width: 100%;
+height: 100vh;
+background-color: rgba(0, 0, 0, 0.5);
+position: fixed;
+top: 0px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#extendimg
+{
+width: 600px;
+height: 400px;
+}
+#close
+{
+position: fixed;
+top: 30px;
+right: 30px;
+color: white;
+cursor: pointer;
+}
+
+#gallaxyhead
+{
+position: relative;
+top: 20px;
+left: -80px;
+text-decoration: none;
+color: rgba(255, 255, 255, 0.678);
+}
+#gallaxyhead:hover{
+color: lightgreen;
+}

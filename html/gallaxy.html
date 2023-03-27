@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/gallaxy.css">
+   
+</head>
+<body onload="head_img()">
+    <div id="head">
+      <ul id="main">
+        <li id="sublist"><a id="nav" href="E:\WEB TECHNOLOGY\Food_travel_project\html\homepage.html">Home</a></li>
+        <li id="sublist"><a  id="nav"href="E:\WEB TECHNOLOGY\Food_travel_project\html\info.html">Info</a></li>
+        <li id="sublist" class="right"><a id="nav" href="../index.html">Logout</a></li>
+        <li id="sublist"><a  id="gallaxyhead" href="../html/gallaxy.html">Gallaxy</a></li>
+    </ul>
+      <h1 id="txt">Gallaxy</h1>
+      <button id="left" onclick="left()"><</button>
+      <button id="right" value="inc" onclick="right()">></button>
+    </div>
+    <div id="body_of_gallaxy">
+      <div id="gallaxy">
+        <img class="images" onclick="opentheimage(0)">
+        <img class="images" onclick="opentheimage(1)">
+        <img class="images" onclick="opentheimage(2)">
+        <img class="images" onclick="opentheimage(3)">
+        <img class="images" onclick="opentheimage(4)">
+        <img class="images" onclick="opentheimage(5)">
+        <img class="images" onclick="opentheimage(6)">
+        <img class="images" onclick="opentheimage(7)">
+        <img class="images" onclick="opentheimage(8)">
+        <img class="images" onclick="opentheimage(9)">
+        <img class="images" onclick="opentheimage(10)">
+        <img class="images" onclick="opentheimage(11)">
+        <img class="images" onclick="opentheimage(12)">
+        <img class="images" onclick="opentheimage(13)">
+        <img class="images" onclick="opentheimage(14)">
+        <img class="images" onclick="opentheimage(15)">
+        <img class="images" onclick="opentheimage(16)">
+        <img class="images" onclick="opentheimage(17)">
+        <img class="images" onclick="opentheimage(18)">
+        <img class="images" onclick="opentheimage(19)">
+
+    </div>
+    </div>
+    <div id="extendimage" style="display: none;">
+      <h1 id="close" onclick="closeImg()">X</h1>
+      <img id="extendimg">
+
+    </div>
+   <script>
+     var Arrayimages=["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"]
+        var i=0;
+        function head_img()
+        {
+          if(i>=7)
+          {
+            i=0;
+            document.getElementById("head").style.backgroundImage=`url(../html/images/${Arrayimages[i]})`
+          }
+          else
+          {
+            document.getElementById("head").style.backgroundImage=`url(../html/images/${Arrayimages[i]})`
+
+          }
+        //   i++;
+        // setTimeout(img,2000);
+        }
+        function right()
+        {
+          i++;
+          if(i>Arrayimages.length-1)
+          {
+            i=0;
+            document.getElementById("head").style.backgroundImage=`url(../html/images/${Arrayimages[i]})`
+          }
+          else
+          {
+            document.getElementById("head").style.backgroundImage=`url(../html/images/${Arrayimages[i]})`
+
+          }
+        }
+        function left()
+        {
+          i--;
+          if(i<0)
+          {
+            i=Arrayimages.length-1;
+            i=0;
+            document.getElementById("head").style.backgroundImage=`url(../html/images/${Arrayimages[i]})`
+          }
+          else
+          {
+            document.getElementById("head").style.backgroundImage=`url(../html/images/${Arrayimages[i]})`
+
+          }
+        }
+    // this for gallaxy
+    var img=document.getElementsByClassName("images");
+    console.log(img)
+    for(i=0;i<img.length;i++)
+    {
+      img[i].src=`../html/images/${i}.jpg`;
+    }
+    function closeImg()
+    {
+      document.getElementById("extendimage").setAttribute("style","display:none")
+    }
+  
+  function opentheimage(img)
+  {
+   console.log(img)
+   document.getElementById("extendimg").setAttribute("src",`../html/foodimg/${img}.jpg`);
+   document.getElementById("extendimage").removeAttribute("style");
+  }
+   </script>
+</body>
+</html>

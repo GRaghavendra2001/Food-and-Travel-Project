@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <!-- <script src="./javascript/login1.js" defer></script> -->
+    <style>
+        *
+        {
+            padding: 0px;
+            margin: 0px;
+            transition: all 1s;
+        }
+        #container
+        {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.274),rgba(0, 0, 0, 0.842)),url(./javascript/cam.jpg);
+            background-size: 100% 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #main
+        {
+            width: 70%;
+            height: 70vh;
+            background-image: url(./javascript/world.jpg);
+            background-size: 100% 100%;
+            border: 10px solid white;
+            border-radius: 20px;
+            box-shadow: 5px 4px 5px black,-5px -4px 5px black;
+
+            
+        }
+        #maintxt
+        {
+            position: absolute;
+            top: 500px;
+            left: 250px;
+            font-size: 20px;
+            font-weight: lighter;
+        }
+        #logpage
+        {
+            width:45%;
+            height: 65vh;
+            background-color:rgba(0, 0, 0, 0.562);
+            float: right;
+            box-shadow: 5px 4px 5px black,-5px -4px 5px black;
+            position: relative;
+            top: 10px;
+            right: 20px;
+            border-radius: 20px;
+        }
+        #txt
+        {
+            color: white;
+            text-align: center;
+            margin-top: 60px;
+            text-shadow: 2px 2px 2px black;
+        }
+        #Email
+        {
+            position: relative;
+            top: 50px;
+            left: 70px;
+            width: 300px;
+            height: 35px;
+            font-size: 20px;
+            text-align: center;
+            border: none;
+            box-shadow: 3px 3px 5px lime,-3px -3px 5px lime;
+            border-radius: 20px;
+            background-color: none;
+        }
+        #pass
+        {
+            position: relative;
+            top: 80px;
+            left: 70px;
+            width: 300px;
+            height: 35px;
+            font-size: 20px;
+            text-align: center;
+            border: none;
+            box-shadow: 3px 3px 5px lime,-3px -3px 5px lime;
+            border-radius: 20px;
+        }
+
+       #but
+       {
+        position: absolute;
+        top: 300px;
+        left: 150px;
+        width: 140px;
+        height: 35px;
+       box-shadow: 3px 3px 5px black;
+       border-radius: 20px;
+       background-color: skyblue;
+       font-weight: bold;
+       display: flex;
+       justify-content: center;
+       align-content: center;
+
+       }
+       #but:hover
+       {
+        transform: scale(1.1);
+       }
+       #check
+       {
+        position: relative;
+        top: 120px;
+        right:200px;
+       }
+       #p
+       {
+        position: absolute;
+        left: 120px;
+        top: 260px;
+        color: white;
+        text-shadow: 2px 2px 5px black;
+       }
+       #log
+       {
+        position: absolute;
+        top: 360px;
+        left: 50px;
+        color: white;
+        text-shadow: 3px 3px 5px black;
+       }
+       #facebook
+       {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 350px;
+        right: 250px;
+        border-radius: 100%;
+       }
+       #google
+       {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 343px;
+        right: 200px;
+       }
+       #result
+       {
+        position: absolute;
+        left: 150px;
+        top: 280px;
+        font-size: 16px;
+        color: red;
+        text-shadow: 4px 5px 5px black;
+       }
+       #visible
+{
+    width: 23px;
+    position: absolute;
+    right: 70px;
+    top: 31vh;
+    border-radius: 100%;
+    border: solid 2px solid royalblue;
+    cursor: pointer;
+}
+ 
+    </style>
+</head>
+<body id="body">
+    
+    <div id="container">
+        <div id="main">
+            <h1 id="maintxt"> --> Login to Travel and Food project.</h1>
+            <form id="frm">
+            <div id="logpage">
+                <h1 id="txt">Login</h1>
+                <input type="text" placeholder="Enter Email" id="Email">
+                <input type="password" placeholder="Password" id="pass">
+                <img src="../Food_travel_project/monkey/closeeyes.jpg" id="visible" 
+                onmousedown="visiblePassword()"
+                onmouseup="hidePassword()">
+                <h1 id="result"></h1>
+                <input type="checkbox"  id="check"><p id="p">Keep me login in</p></input>
+                <input type="button" id="but" value="Login" onclick="authorized()">
+            </form>
+                <p id="log">Or login with</p>
+                <a href="https://www.facebook.com"><img src="./javascript/facebook.png" id="facebook"></a>
+                <a href="https://www.google.com"><img src="./javascript/google.png" id="google"></a>
+            
+            </div>
+        </div>
+    </div>
+    <script>
+ var emailid="sumraghu99@gmail.com"
+var password="Raghu@"
+function authorized()
+{
+    var usergivenid1=document.getElementById("Email").value
+    var usergivenpass1=document.getElementById("pass").value
+    if(emailid==usergivenid1 &&password==usergivenpass1)
+    {
+        document.getElementById("frm").setAttribute("action","./html/homepage.html")
+        document.getElementById("but").setAttribute("type","submit")
+    }
+    else if(emailid!=usergivenid1 &&password==usergivenpass1)
+    {
+       
+        document.getElementById("result").innerHTML="Wrong Email ID"
+    }
+    else if(emailid==usergivenid1 &&password!=usergivenpass1)
+    {
+        document.getElementById("result").innerHTML="Wrong Password"
+    }
+    else 
+    {
+        
+        document.getElementById("result").innerHTML="Wrong UserID and Password"
+    }
+
+}
+
+function visiblePassword()
+{
+    document.getElementById("pass").removeAttribute("type")
+    document.getElementById("visible").setAttribute("src","./monkey/openeyes.jpg")
+    document.getElementById("visible").style.transform="rotateY(360deg)"
+}
+function hidePassword()
+{
+    document.getElementById("pass").setAttribute("type","password")
+    document.getElementById("visible").setAttribute("src","./monkey/closeeyes.jpg")
+    document.getElementById("visible").style.transform="rotateY(-360deg)"
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+ *{
+    margin: 0px;
+    padding: 0px;
+    
+}
+body{
+    background-image: linear-gradient(rgb(44, 41, 41),rgba(54, 48, 48, 0.616)),url(../Assets/images/bg1.jpg);
+    background-size:100% 200px;
+    background-repeat: no-repeat,no-repeat;
+    background-color: rgb(44, 41, 41);
+}
+#navbar{
+    width:100%;
+    height: 60px;
+    z-index: 0;
+}
+#main{
+    display: flex;
+    list-style: none;
+    
+    
+}
+#sublist{
+   margin-right: 100px;
+   font-size: 23px;
+   color: rgba(255, 255, 255, 0.712);
+   transition: all 0.3s;
+   text-shadow: 2px 2px 2px black;
+}
+#sublist:hover{
+    transform: scale(1.2);
+    color: lightgreen;
+}
+.right{
+    position: relative;
+    left: 950px;
+}
+#container{
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: absolute;
+    left: 700px;
+    top: 30px;
+}
+#place{
+    width: 230px;
+    height: 200px;
+    background-size: 100% 250px;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent; 
+    transition: all 0.5s ;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.644),-3px -3px 3px rgba(0, 0, 0, 0.575);
+    border-radius: 5px;
+    margin-top: 60px;
+}
+#place:hover{
+    transform: scale(1.2);
+    color: rgba(255, 255, 255, 0.767);
+    
+}
+.place1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.411),rgba(128, 128, 128, 0.356)),url(../Assets/images/India.jpg);
+    color: rgba(255, 255, 255, 0.767);
+}
+.place2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.411),rgba(128, 128, 128, 0.356)), url(../Assets/images/china.jpg);
+    color: rgba(255, 255, 255, 0.767);
+}
+
+.place3{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.411),rgba(128, 128, 128, 0.356)),url(../Assets/images/japan.jpg);
+    color: rgba(255, 255, 255, 0.767);
+}
+.place4{
+    background-image: url(../Assets/images/Switzerland.webp);
+    color: rgba(255, 255, 255, 0.767);
+}
+#txt{
+    color: white;
+    font-size: 60px;
+    position: relative;
+    font-family: 'Righteous', cursive;
+    bottom: 480px;
+    right: 850px;
+    width: 35%;
+    height: 400px;
+} 
+#bodyofpage1{
+    width: 100%;
+    height: 160vh;
+    background-image: linear-gradient(rgb(44, 41, 41),rgba(54, 48, 48, 0.616));
+    background-size:100% 2000px;
+    background-repeat: no-repeat,no-repeat;
+    position: relative;
+    top: 580px;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+#containerinfo{
+    width: 80%;
+    height: 80vh;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    left: 10%;
+    top: 10vh;
+    overflow: hidden;
+    /* background-color: rgba(128, 255, 0, 0.336); */
+
+}
+
+#Athrnam1{
+    position: absolute;
+    left: 62%;
+    top: 15%;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 10px;
+    color: white;
+}
+#Athrinfo{
+    position: absolute;
+    left: 45%;
+    top: 25%;
+    font-size: 20px;
+    text-align:justify;
+    text-shadow: 1px 1px 1px  green;
+    letter-spacing: 1px;
+    color: white;
+}
+#imgblog{
+    width: 40%;
+    height: 90%;
+    background-image: url(../Assets/images/jams.jpg);
+    background-size: 100% 100%;
+    transition: transform 1s;
+    box-shadow: 5px 5px 5px black,-5px -5px 5px black;
+    margin-left: 20px;
+    margin-top: 20px;
+    
+}
+
+
+table{
+    border: 5px solid black;
+    border-collapse: collapse;
+    position: absolute;
+    top: 640px;
+    left: 110px;
+    box-shadow: 3px 3px 5px black,-3px -3px 5px black;
+    background-color: rgba(101, 167, 228, 0.486);
+}
+th{
+    border: 3px solid black;
+    font-size: 40px;
+    color: white;
+    text-decoration-line: none;
+
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+#footer{
+    width: 98%;
+    height: 50px;
+    background-color: rgb(142, 143, 136);
+    position: absolute;
+    top: 259vh; 
+}
+i{
+    font-size: 30px;
+    padding-top: 0px;
+    letter-spacing: 20px;
+    
+}
+#cpr
+{
+    padding-left: 20px;
+    padding-top: 20px;
+    
+}
+#cptxt{
+    padding-left: 0px;
+    font-size: 24px;
+    position: absolute;
+    left: 70px;
+    top: 23px;
+    letter-spacing: 5px;
+}
+#social{
+   
+    float: right;
+    margin-left: 520px;
+    
+}
+
+.sociallinks
+{
+     color: black;
+    text-shadow: 3px 3px 5px black;
+    position: relative;
+    bottom: 10px;
+    left: -10px;
+    
+}
+.sociallinks:hover{
+    color: lime;
+}
+#up{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    border-radius: 100%;
+    top: 500px;
+    left: 91%;
+
+}
+#arrow{
+    position: absolute;
+    bottom: 80px;
+    left:-1200px;
+    font-size: 60px;
+    color: transparent;
+    
+}
+#arrow:hover{
+    color: black;
+}
+#gallaxyhead
+{
+ position: relative;
+ top: 0px;
+ left: -80px;
+ text-decoration: none;
+ color: rgba(255, 255, 255, 0.678);
+}
+#gallaxyhead:hover{
+ color: lightgreen;
+}
+
+

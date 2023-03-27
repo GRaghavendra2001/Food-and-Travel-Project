@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../javascript/login.js" defer></script>
+   
+    <title>Document</title>
+    <style>
+             
+    </style>
+</head>
+<body id="body">
+   
+        <div id="outerdiv">
+            <form id="form" >
+            <div id="innerdiv">
+                <h1 id="heading">Login</h1>
+                <div id="inputDiv">
+                    <input type="text" id="Email" placeholder="Enter the Email">
+                 </div> <br>
+                <div id="passDiv">
+                    <input type="password" id="pass" placeholder="Enter the Password">
+                    <img src="../Assets/images/closeeyes.jpg" id="visible" 
+                    onmousedown="visiblePassword()"
+                    onmouseup="hidePassword()">
+                    
+                </div> 
+                <h1 id="result"> </h1>
+                    <input type="button" id="but" value="Login" onclick="autho()">
+            </div>
+        </form>
+        </div>
+   
+</body>
+</html>
